@@ -1,0 +1,497 @@
+/* reset */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+/* INICIO Y GENERAL */
+
+
+header h1{ 
+    background-color: skyblue;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+}
+
+nav ul li{
+    background-color: skyblue;
+    border-radius: 0.8rem;
+    margin: 1rem;
+    padding: 0.7rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+.subMenu{
+    display: none;
+    position: absolute;
+    background-color: rgb(198, 224, 235);
+}
+
+.menuCont ul li:hover > ul {
+    display: block;
+}
+
+
+
+.conteHome{
+    display: grid;
+    grid-template-areas: "card1 card2 card3"
+                         "card4 card5 card6";
+    justify-content: center;
+    background-color: aquamarine;
+    margin-bottom: 20rem;
+    gap: 2rem;
+}
+
+
+
+.conteCard1{
+    grid-area: card1;
+    background-color: beige;
+    padding: 1.5rem;
+    
+}
+
+.conteCard2{
+    grid-area: card2;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.conteCard3{
+    grid-area: card3;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.conteCard4{
+    grid-area: card4;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.conteCard5{
+    grid-area: card5;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.conteCard6{
+    grid-area: card6;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.imgCard1{
+    width: 20vw;
+}
+
+.conteBot{
+    margin: 1rem;
+    text-align: center;
+}
+
+
+/* PRODUCTO */
+
+
+.contenedor{
+    display: grid;
+    grid-template-areas: "prod1 prod2 prod3"
+                         "prod4 prod5 prod6";
+    justify-content: center;
+    background-color: aquamarine;
+    margin-top: 3rem;
+    margin-bottom: 20rem;
+    gap: 1rem;
+    text-align: center;
+}
+
+.cardCard01{
+    grid-area: prod1;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.cardCard02{
+    grid-area: prod2;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.cardCard03{
+    grid-area: prod3;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.cardCard04{
+    grid-area: prod4;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.cardCard05{
+    grid-area: prod5;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.cardCard06{
+    grid-area: prod6;
+    background-color: beige;
+    padding: 1.5rem;
+}
+
+.imgCard{
+    width: 15vw;
+}
+
+.imgCard:hover{
+    transform: scale(1.2);
+}
+
+.botonComprar{
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+.contenedorBoton{
+    text-align: center;
+}
+
+
+/* CONTACTO */
+
+
+form{
+    margin-bottom: 20rem;
+}
+
+.contePreg{
+    margin-top: 2rem;
+}
+
+legend{
+    text-align: center;
+}
+
+.legend1{
+    margin: 10px;
+}
+
+fieldset{
+    margin: 20px;
+    align-items: center;
+    padding: 5px; 
+}
+
+div label, input{
+    padding: 5px;
+}
+
+.boton-form{
+    margin: 12px;
+}
+
+.pregunta{
+    background-color: aquamarine;
+    text-align: center;
+    padding: 10px;
+}
+
+.forma{
+    background-color: bisque;
+    padding-left: 60px;
+    line-height: 25px;
+}
+
+
+
+/* NOSOTROS */
+
+.contenedorNos{
+    display: grid;
+    grid-template-areas: "imagen imagen"
+                         "titulo1 titulo2"
+                         "titulo3 titulo4";
+    margin-bottom: 20rem;
+    gap: 3rem;
+    text-align: center;
+}
+
+.imagenNos{
+    grid-area: imagen;
+}
+
+.bloques1{
+    grid-area: titulo1;
+    padding: 1rem;
+}
+
+.bloques2{
+    grid-area: titulo2;
+    padding: 1rem;
+}
+
+.bloques3{
+    grid-area: titulo3;
+    padding: 1rem;
+}
+
+.bloques4{
+    grid-area: titulo4;
+    padding: 1rem;
+}
+
+
+.imagenNos{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.imgCardnos{
+    width: 30vw;
+    margin-top: 2rem;
+}
+
+.tituloNos{
+    background-color: aquamarine;
+    border-radius: 11rem;
+    padding: 0.7rem;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.parrafo{
+    text-align: justify;
+}
+
+
+/* PREGUNTAS FRECUENTES */
+
+
+.preguntas{
+    text-align: left;
+    margin: 10px;
+    padding: 5px;
+}
+
+.parrafo-p{
+    text-align: justify;
+    line-height: 20px;
+    margin: 10px;
+}
+
+.contenedorPr{
+    margin-bottom: 20rem;
+    display: grid;
+    grid-template-areas: "fila1"
+                         "fila2"
+                         "fila3"
+                         "fila4";
+    gap: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.contePr01{
+    grid-area: fila1;
+}
+
+.contePr02{
+    grid-area: fila2;
+}
+
+.contePr03{
+    grid-area: fila3;
+}
+
+.contePr04{
+    grid-area: fila4;
+}
+
+
+/* FOOTER */
+
+
+footer{
+    text-align: center;
+    background-color: skyblue;
+    padding: 15px; 
+}
+
+/* media queries */
+
+/* inicio */
+
+@media screen and (min-width:320px) {
+    .conteHome{
+        grid-template-areas: "card1" 
+                             "card2"
+                             "card3"
+                             "card4"
+                             "card5" 
+                             "card6";
+        background-color: aquamarine;
+        margin-bottom: 20rem;
+        row-gap: 2rem;
+    }
+    
+}
+
+@media screen and (min-width:600px) {
+    .conteHome{
+        grid-template-areas: "card1" 
+                             "card2"
+                             "card3"
+                             "card4"
+                             "card5" 
+                             "card6";
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+    .conteHome{
+        grid-template-areas: "card1 card2 card3"
+                             "card4 card5 card6";
+    }
+    
+}
+
+
+/* producto */
+
+@media screen and (min-width:320px) {
+    .contenedor{
+        display: grid;
+        grid-template-areas: "prod1" 
+                             "prod2" 
+                             "prod3"                        
+                             "prod4" 
+                             "prod5" 
+                             "prod6";
+        row-gap: 1rem;
+
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    .contenedor{
+        display: grid;
+        grid-template-areas: "prod1" 
+                             "prod2" 
+                             "prod3"                        
+                             "prod4" 
+                             "prod5" 
+                             "prod6";
+        row-gap: 1rem;
+    }
+
+}
+
+
+
+@media screen and (min-width:1024px) {
+    .contenedor{
+        display: grid;
+        grid-template-areas: "prod1 prod2 prod3"
+                             "prod4 prod5 prod6";
+    }
+}
+
+/* nosotros */
+
+@media screen and (min-width:320px) {
+    .contenedorNos{
+        grid-template-areas: "imagen"
+                             "titulo1" 
+                             "titulo2"
+                             "titulo3" 
+                             "titulo4";
+    }    
+}
+
+@media screen and (min-width:600px) {
+    .contenedorNos{
+        grid-template-areas: "imagen"
+                             "titulo1" 
+                             "titulo2"
+                             "titulo3" 
+                             "titulo4";
+    }    
+}
+
+
+@media screen and (min-width:1024px) {
+    .contenedorNos{
+        grid-template-areas: "imagen imagen"
+                             "titulo1 titulo2"
+                             "titulo3 titulo4";
+    }    
+}
+
+/* preguntas */
+
+@media screen and (min-width:320px) {
+    .contenedorPr{
+        grid-template-areas: "fila1"
+                             "fila2"
+                             "fila3"
+                             "fila4";
+        row-gap: 2rem;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    .contenedorPr{
+        grid-template-areas: "fila1"
+                             "fila2"
+                             "fila3"
+                             "fila4";     
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .contenedorPr{
+        grid-template-areas: "fila1"
+                             "fila2"
+                             "fila3"
+                             "fila4"; 
+    }
+
+    .contePr01{
+        background-color: beige;
+    }
+    
+    .contePr02{
+        background-color: beige;
+    }
+    
+    .contePr03{
+        background-color: beige;
+    }
+    
+    .contePr04{
+        background-color: beige;
+    }
+}
