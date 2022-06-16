@@ -47,8 +47,6 @@ a{
     display: block;
 }
 
-
-
 .conteHome{
     display: grid;
     grid-template-areas: "card1 card2 card3"
