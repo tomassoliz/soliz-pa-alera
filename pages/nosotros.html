@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
 
-    <!-- link del css -->
+    <!-- link css -->
     <link rel="stylesheet" href="../css/main.css">
 
 
@@ -22,30 +22,53 @@
 
 <body>
     
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-light">
-            <div class="container-fluid">
-            <a class="navbar-brand col-2" href="#">Pañalera tobis</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse row" id="navbarNavAltMarkup"> 
-                <div class="navbar-nav">
-                <a class="nav-link active col-2" aria-current="page" href="../index.html">Inicio</a>
-                <a class="nav-link col-2" href="#volver">Contacto</a>
-                <a class="nav-link col-2" href="Productos.html">Productos</a>
-                <a class="nav-link col-2" href="Nosotros.html">Nosotros</a>
-                <a class="nav-link col-2" href="PreguntasFrecuentes.html">Preguntas Frecuentes</a>
-                </div>
-            </div>
-            </div>
-        </nav>
+    <header id="volver">
 
-    </div>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-light">
+                <div class="container-fluid">
+                <a class="navbar-brand" href="#">Pañalera Tobis</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="productos.html">Huggies</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Pampers</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Babysec</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Estrella</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Nutricion</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Accesorios</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Adultos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#volver">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                    </li>
+                    </ul>
+                </div>
+                </div>
+            </nav>
+        </div>
+
+    </header>
 
     <main>
 
-  
 
         <div class="imagenNos">
             <img class="imgCardnos" src="../img/nosotros.jpg" alt="imagen de grupo de personas">
@@ -104,6 +127,9 @@
     <footer>
         Tienda oficial de pañalera tobis - 2022 todos los derechos reservados
     </footer>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 
 </body>
 </html>
