@@ -1,7 +1,8 @@
 /* HOME */
 .conteHome {
   display: grid;
-  grid-template-areas: "card1 card2 card3" "card4 card5 card6";
+  grid-template-areas: "card1 card2 card3"
+ "card4 card5 card6";
   justify-content: center;
   margin-bottom: 20rem;
   margin-top: 10rem;
@@ -50,17 +51,25 @@
 /* media de Home */
 @media screen and (min-width: 320px) {
   .conteHome {
-    grid-template-areas: "card1"  "card2" "card3" "card4" "card5"  "card6";
+    grid-template-areas: "card1" 
+ "card2"
+ "card3"
+ "card4"
+ "card5" 
+ "card6";
     margin-bottom: 20rem;
     row-gap: 2rem; } }
 
 @media screen and (min-width: 600px) {
   .conteHome {
-    grid-template-areas: "card1 card2"  "card3 card4" "card5 card6"; } }
+    grid-template-areas: "card1 card2" 
+ "card3 card4"
+ "card5 card6"; } }
 
 @media screen and (min-width: 1024px) {
   .conteHome {
-    grid-template-areas: "card1 card2 card3" "card4 card5 card6"; } }
+    grid-template-areas: "card1 card2 card3"
+ "card4 card5 card6"; } }
 
 /* PRODUCTOS */
 .contenedor .cardCard01, .contenedor .cardCard02, .contenedor .cardCard03, .contenedor .cardCard04, .contenedor .cardCard05, .contenedor .cardCard06 {
@@ -70,7 +79,8 @@
 
 .contenedor {
   display: grid;
-  grid-template-areas: "prod1 prod2 prod3" "prod4 prod5 prod6";
+  grid-template-areas: "prod1 prod2 prod3"
+ "prod4 prod5 prod6";
   justify-content: center;
   margin-top: 2rem;
   margin-bottom: 20rem;
@@ -108,19 +118,27 @@ h3 {
 @media screen and (min-width: 320px) {
   .contenedor {
     display: grid;
-    grid-template-areas: "prod1"  "prod2"  "prod3"                         "prod4"  "prod5"  "prod6";
+    grid-template-areas: "prod1" 
+ "prod2" 
+ "prod3"                        
+ "prod4" 
+ "prod5" 
+ "prod6";
     row-gap: 1rem; } }
 
 @media screen and (min-width: 600px) {
   .contenedor {
     display: grid;
-    grid-template-areas: "prod1 prod2"  "prod3 prod4"  "prod5 prod6";
+    grid-template-areas: "prod1 prod2" 
+ "prod3 prod4" 
+ "prod5 prod6";
     row-gap: 1rem; } }
 
 @media screen and (min-width: 1024px) {
   .contenedor {
     display: grid;
-    grid-template-areas: "prod1 prod2 prod3" "prod4 prod5 prod6"; } }
+    grid-template-areas: "prod1 prod2 prod3"
+ "prod4 prod5 prod6"; } }
 
 /* CONTACTO */
 .contePreg {
@@ -156,7 +174,9 @@ form {
 /* NOSOTROS */
 .contenedorNos {
   display: grid;
-  grid-template-areas: "imagen imagen" "titulo1 titulo2" "titulo3 titulo4";
+  grid-template-areas: "imagen imagen"
+ "titulo1 titulo2"
+ "titulo3 titulo4";
   margin-bottom: 20rem;
   gap: 3rem;
   text-align: center; }
@@ -193,23 +213,36 @@ form {
 /* media de nosotros */
 @media screen and (min-width: 320px) {
   .contenedorNos {
-    grid-template-areas: "imagen" "titulo1"  "titulo2" "titulo3"  "titulo4";
+    grid-template-areas: "imagen"
+ "titulo1" 
+ "titulo2"
+ "titulo3" 
+ "titulo4";
     margin: 1.5rem; } }
 
 @media screen and (min-width: 600px) {
   .contenedorNos {
-    grid-template-areas: "imagen" "titulo1"  "titulo2" "titulo3"  "titulo4";
+    grid-template-areas: "imagen"
+ "titulo1" 
+ "titulo2"
+ "titulo3" 
+ "titulo4";
     margin: 3rem; } }
 
 @media screen and (min-width: 1024px) {
   .contenedorNos {
-    grid-template-areas: "imagen imagen" "titulo1 titulo2" "titulo3 titulo4"; } }
+    grid-template-areas: "imagen imagen"
+ "titulo1 titulo2"
+ "titulo3 titulo4"; } }
 
 /* PREGUNTAS FRECUENTES */
 .contenedorPr {
   margin-bottom: 20rem;
   display: grid;
-  grid-template-areas: "fila1" "fila2" "fila3" "fila4";
+  grid-template-areas: "fila1"
+ "fila2"
+ "fila3"
+ "fila4";
   gap: 2rem;
   margin-left: 10rem;
   margin-right: 10rem;
@@ -238,17 +271,26 @@ form {
 /* media de preguntas */
 @media screen and (min-width: 320px) {
   .contenedorPr {
-    grid-template-areas: "fila1"  "fila2" "fila3" "fila4";
+    grid-template-areas: "fila1" 
+ "fila2"
+ "fila3"
+ "fila4";
     margin: 2rem; } }
 
 @media screen and (min-width: 600px) {
   .contenedorPr {
-    grid-template-areas: "fila1"  "fila2" "fila3" "fila4";
+    grid-template-areas: "fila1" 
+ "fila2"
+ "fila3"
+ "fila4";
     margin: 3rem; } }
 
 @media screen and (min-width: 1024px) {
   .contenedorPr {
-    grid-template-areas: "fila1"  "fila2" "fila3" "fila4";
+    grid-template-areas: "fila1" 
+ "fila2"
+ "fila3"
+ "fila4";
     margin: 10rem; } }
 
 /* footer */
