@@ -4,11 +4,116 @@
 
 @import "utilities/variables";
 
-/* PRODUCTOS */
+// mixin 
+
+@mixin grid{
+    background-color: $color-1;
+    padding: $tamaño-2;
+    border-radius: 10px;
+}
 
 // nesting
 
-/* main */
+/* HOME */
+
+.conteHome{
+    display: grid;
+    grid-template-areas: "card1 card2 card3"
+                         "card4 card5 card6";
+    justify-content: center;
+    margin-bottom: 20rem;
+    margin-top: 10rem;
+    gap: 2rem;
+    
+.conteCard1{
+    grid-area: card1;
+    @include grid; 
+}
+
+.conteCard2{
+    grid-area: card2;
+    @include grid;  
+}
+
+.conteCard3{
+    grid-area: card3;
+    @include grid;
+}
+
+.conteCard4{
+    grid-area: card4;
+    @include grid;
+}
+
+.conteCard5{
+    grid-area: card5;
+    @include grid;
+}
+
+.conteCard6{
+    grid-area: card6;
+    @include grid;;
+}
+a{
+    text-decoration: none;
+}
+.imgCard1:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
+}
+.conteBot{
+    margin: 1rem;
+    text-align: center;
+}
+.imgCard1{
+    width: 20vw;
+}
+}
+
+/* media de Home */
+
+@media screen and (min-width:320px) {
+    .conteHome{
+        grid-template-areas: "card1" 
+                             "card2"
+                             "card3"
+                             "card4"
+                             "card5" 
+                             "card6";
+        margin-bottom: 20rem;
+        row-gap: 2rem;
+    }
+    
+}
+
+@media screen and (min-width:600px) {
+    .conteHome{
+        grid-template-areas: "card1 card2" 
+                             "card3 card4"
+                             "card5 card6";
+    }
+    
+}
+
+@media screen and (min-width:1024px) {
+    .conteHome{
+        grid-template-areas: "card1 card2 card3"
+                             "card4 card5 card6";
+    }
+    
+}
+
+/* PRODUCTOS */
+
+// lo puse aca porque sino lo manda arriba en el codigo 
+
+// extend 
+
+%grid {
+    background-color: $color-1;
+    padding: $tamaño-2;
+    border-radius: 10px;
+}
 
 .contenedor{
     display: grid;
@@ -21,44 +126,32 @@
     text-align: $just-text-1;
     .cardCard01{
         grid-area: prod1;
-        background-color: $color-1;
-        padding: $tamaño-2;
-        border-radius: 10px;
+        @extend %grid;
     }
     
     .cardCard02{
         grid-area: prod2;
-        background-color: $color-1;
-        padding: $tamaño-2;
-        border-radius: 10px;
+        @extend %grid;
     }
     
     .cardCard03{
         grid-area: prod3;
-        background-color: $color-1;
-        padding: $tamaño-2;
-        border-radius: 10px;
+        @extend %grid;
     }
     
     .cardCard04{
         grid-area: prod4;
-        background-color: $color-1;
-        padding: $tamaño-2;
-        border-radius: 10px;
+        @extend %grid;
     }
     
     .cardCard05{
         grid-area: prod5;
-        background-color: $color-1;
-        padding: $tamaño-2;
-        border-radius: 10px;
+        @extend %grid;
     }
     
     .cardCard06{
         grid-area: prod6;
-        background-color: $color-1;
-        padding: 1.5rem;
-        border-radius: 10px;
+        @extend %grid;
     }
     
     .contextCard{
@@ -87,14 +180,6 @@
     font-size: $tamaño-1;
 
 }
- /* footer */
-
-footer{
-    text-align: center;
-    background-color: skyblue;
-    padding: 15px; 
-}
-
 
  /* media de productos */
 
@@ -134,7 +219,217 @@ footer{
     }
 }
 
+/* CONTACTO */
+
+.contePreg{
+    margin-top: 2rem;
+    list-style: none;
+    margin-bottom: 15rem;
+    .pregunta{
+        background-color: aquamarine;
+        text-align: center;
+        padding: 10px;
+    }
+    .forma{
+        background-color: bisque;
+        padding-left: 60px;
+        line-height: 25px;
+    }
+}
+
+form{
+    fieldset{
+        margin: 20px;
+        align-items: $just-text-1;
+        padding: 5px;
+        border: 1px solid black; 
+    }
+    margin-bottom: 20rem;
+    legend{
+        text-align: $just-text-1;
+        border-bottom: 1px solid black;
+    }
+    .boton-form{
+        margin: $tamaño-1;
+    }
+    .legend1{
+        margin: 12px ;
+    }
+    label, input{
+        padding: 5px;
+    }
+}
+
+/* NOSOTROS */
 
 
+.contenedorNos{
+    display: grid;
+    grid-template-areas: "imagen imagen"
+                         "titulo1 titulo2"
+                         "titulo3 titulo4";
+    margin-bottom: $tamaño-5;
+    gap: $tamaño-4;
+    text-align: $just-text-1;
+    .imagenNos{
+        grid-area: imagen;
+    }
+
+    .bloques1{
+        grid-area: titulo1;
+        padding: $tamaño-1;
+    }
+    
+    .bloques2{
+        grid-area: titulo2;
+        padding: $tamaño-1;
+    }
+    
+    .bloques3{
+        grid-area: titulo3;
+        padding: $tamaño-1;
+    }
+    
+    .bloques4{
+        grid-area: titulo4;
+        padding: $tamaño-1;
+    }
+    .tituloNos{
+        background-color: aquamarine;
+        border-radius: 11rem;
+        padding: 0.7rem;
+        display: inline-block;
+        margin-bottom: $tamaño-1;
+    }
+    .parrafo{
+        text-align: justify;
+    }
+}
+
+.imagenNos{
+    text-align: center;
+    margin-bottom: 2rem;
+    .imgCardnos{
+        width: 30vw;
+        margin-top: 2rem;
+    }  
+}
 
 
+/* media de nosotros */
+
+@media screen and (min-width:320px) {
+    .contenedorNos{
+        grid-template-areas: "imagen"
+                             "titulo1" 
+                             "titulo2"
+                             "titulo3" 
+                             "titulo4";
+    margin: $tamaño-2;
+    }    
+}
+
+@media screen and (min-width:600px) {
+    .contenedorNos{
+        grid-template-areas: "imagen"
+                             "titulo1" 
+                             "titulo2"
+                             "titulo3" 
+                             "titulo4";
+    margin: $tamaño-4;          
+    }    
+}
+
+
+@media screen and (min-width:1024px) {
+    .contenedorNos{
+        grid-template-areas: "imagen imagen"
+                             "titulo1 titulo2"
+                             "titulo3 titulo4";
+    }    
+}
+
+/* PREGUNTAS FRECUENTES */
+
+.contenedorPr{
+    margin-bottom: $tamaño-5;
+    display: grid;
+    grid-template-areas: "fila1"
+                         "fila2"
+                         "fila3"
+                         "fila4";
+    gap: 2rem;
+    margin-left: $tamaño-6;
+    margin-right: $tamaño-6;
+    margin-top: $tamaño-6;
+    
+    .contePr01{
+        grid-area: fila1;
+        background-color: beige;
+    }
+    
+    .contePr02{
+        grid-area: fila2;
+        background-color: beige;
+    }
+    
+    .contePr03{
+        grid-area: fila3;
+        background-color: beige;
+    }
+    
+    .contePr04{
+        grid-area: fila4;
+        background-color: beige;
+    }
+    .preguntas{
+        text-align: left;
+        margin: 10px;
+        padding: 5px;
+    }
+    
+    .parrafo-p{
+        text-align: $just-text-2;
+        line-height: 20px;
+        margin: 10px;
+    }
+}
+
+/* media de preguntas */
+
+@media screen and (min-width:320px){
+    .contenedorPr{
+        grid-template-areas: "fila1" 
+                             "fila2"
+                             "fila3"
+                             "fila4";
+    margin: $tamaño-3;
+    }
+}
+
+@media screen and (min-width:600px){
+    .contenedorPr{
+        grid-template-areas: "fila1" 
+                             "fila2"
+                             "fila3"
+                             "fila4";
+    margin: $tamaño-4;
+    }
+}
+@media screen and (min-width:1024px){
+    .contenedorPr{
+        grid-template-areas: "fila1" 
+                             "fila2"
+                             "fila3"
+                             "fila4";
+    margin: $tamaño-6;
+    }
+}
+
+ /* footer */
+
+ footer{
+    text-align: center;
+    background-color: skyblue;
+    padding: 15px; 
+}
