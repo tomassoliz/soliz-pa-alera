@@ -58,7 +58,7 @@ a{
     text-decoration: none;
 }
 .imgCard1:hover{
-    transform: scale(1.2);
+    transform: scale(1.05);
     transition: 0.3s;
 }
 .conteBot{
@@ -110,7 +110,8 @@ a{
 // extend 
 
 %grid {
-    background-color: $color-1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid rgb(154, 148, 148);
     padding: $tamaño-2;
     border-radius: 10px;
 }
@@ -124,6 +125,7 @@ a{
     margin-bottom: $tamaño-5;
     gap: $tamaño-1;
     text-align: $just-text-1;
+
     .cardCard01{
         grid-area: prod1;
         @extend %grid;
@@ -155,8 +157,18 @@ a{
     }
     
     .contextCard{
+        border-top: 1px solid black;
+        padding-top: 1rem;
         margin-top: $tamaño-2;
-        
+        font-family: 'Lato', sans-serif;
+        line-height: 30px;
+        .tituloCard{
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .precioCard{
+            font-size: 1.5rem;
+        }
     }
     
     .imgCard{
@@ -164,23 +176,62 @@ a{
     }
     
     .imgCard:hover{
-        transform: scale(1.2);
-        transition: 0.5s;
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .contenedorBoton .botonComprar{
+        padding: 20px 60px;
+        background: rgb(233, 52, 233);
+        border: 1px solid #ccc;
+        cursor: pointer;
+        position: relative;
+        border-radius: 25px;
+        overflow: hidden;
     }
     
-    .botonComprar{
-        margin-top: $tamaño-1;
-        padding: ($tamaño-1) / 2;
+    .botonComprar::before{
+        content: 'Comprar' ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transition: 0.2s ease;
     }
-    
-    .contenedorBoton{
-        text-align: $just-text-1;
+
+    .botonComprar::after{
+        content: 'proximamente' ;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        font-weight: 700;
+        transition: 0.1s ease;
+        opacity: 0;
     }
-}   h3{
-    font-size: $tamaño-1;
 
-}
+    .botonComprar:hover::before{
+        transform: translate(-50%, -50%);
+        opacity: 0;
+    }
 
+    .botonComprar:hover::after{
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+    .contenedorBoton .botonComprar:hover{
+        background-color: violet;
+        box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 15px 0 rgba(0,0,0,0.19);
+        transition-duration: 0.4s;   
+    }
+} 
  /* media de productos */
 
 @media screen and (min-width:320px) {
@@ -221,43 +272,83 @@ a{
 
 /* CONTACTO */
 
-.contePreg{
-    margin-top: 2rem;
-    list-style: none;
-    margin-bottom: 15rem;
-    .pregunta{
-        background-color: aquamarine;
-        text-align: center;
-        padding: 10px;
-    }
-    .forma{
-        background-color: bisque;
-        padding-left: 60px;
-        line-height: 25px;
-    }
+.container-form{
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 100px;
+    margin-top: 50px;
 }
 
-form{
-    fieldset{
-        margin: 20px;
-        align-items: $just-text-1;
-        padding: 5px;
-        border: 1px solid black; 
-    }
-    margin-bottom: 20rem;
-    legend{
-        text-align: $just-text-1;
-        border-bottom: 1px solid black;
-    }
-    .boton-form{
-        margin: $tamaño-1;
-    }
-    .legend1{
-        margin: 12px ;
-    }
-    label, input{
-        padding: 5px;
-    }
+.container-form h2{
+    margin-bottom: 15px;
+    font-size: 35px
+}
+.container-form p{
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.container-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+.container-form a i{
+    color: orange;
+    margin-right: 10px;
+}
+.container-form form .campo, textarea{
+    width: 100%;
+    padding: 15px 10px;
+    font-size: 16px;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+}
+.container-form form textarea{
+    max-width: 530px;
+    min-width: 530px;
+    min-height: 140px;
+    max-height: 150px;
+}
+.container-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: orange;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.container-form .btn-borrar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: orange;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.container-form .btn-enviar:hover{
+    background: #e39403;
+}
+
+.container-form .btn-borrar:hover{
+    background: #e39403;
 }
 
 /* NOSOTROS */
@@ -265,14 +356,15 @@ form{
 
 .contenedorNos{
     display: grid;
-    grid-template-areas: "imagen imagen"
+    grid-template-areas: "imagen1 imagen2"
                          "titulo1 titulo2"
                          "titulo3 titulo4";
     margin-bottom: $tamaño-5;
     gap: $tamaño-4;
     text-align: $just-text-1;
-    .imagenNos{
-        grid-area: imagen;
+
+    .imgCardnos2{
+        grid-area: imagen2;
     }
 
     .bloques1{
@@ -308,11 +400,20 @@ form{
 
 .imagenNos{
     text-align: center;
+    row-gap: 2rem;
+    display: flex;
     margin-bottom: 2rem;
-    .imgCardnos{
+    justify-content: space-around;
+    .imgCardnos1{
         width: 30vw;
-        margin-top: 2rem;
-    }  
+        margin-top: 70px;
+        border-radius: 20px;
+    } 
+    .imgCardnos2{
+        width: 30vw;
+        margin-top: 70px;        
+        border-radius: 20px;
+    }
 }
 
 
@@ -320,7 +421,8 @@ form{
 
 @media screen and (min-width:320px) {
     .contenedorNos{
-        grid-template-areas: "imagen"
+        grid-template-areas: "imagen1"
+                             "imagen2"
                              "titulo1" 
                              "titulo2"
                              "titulo3" 
@@ -331,11 +433,12 @@ form{
 
 @media screen and (min-width:600px) {
     .contenedorNos{
-        grid-template-areas: "imagen"
-                             "titulo1" 
-                             "titulo2"
-                             "titulo3" 
-                             "titulo4";
+        grid-template-areas: "imagen1"
+                            "imagen2"
+                            "titulo1" 
+                            "titulo2"
+                            "titulo3" 
+                            "titulo4";
     margin: $tamaño-4;          
     }    
 }
@@ -343,7 +446,7 @@ form{
 
 @media screen and (min-width:1024px) {
     .contenedorNos{
-        grid-template-areas: "imagen imagen"
+        grid-template-areas: "imagen1 imagen"
                              "titulo1 titulo2"
                              "titulo3 titulo4";
     }    
@@ -428,8 +531,108 @@ form{
 
  /* footer */
 
- footer{
+.pie-pagina{
+    width: 100%;
+    background-color: violet;
+}
+
+.box{
     text-align: center;
-    background-color: skyblue;
-    padding: 15px; 
+    padding-top: 2rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p{
+    color: whitesmoke;
+    margin-bottom: 1rem;
+    background-color: tomato;
+}
+
+.pie-pagina .grupo-1 .red-social ul li{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+.pie-pagina .grupo-1 .red-social ul li a{
+    display: block;
+    padding: 0 10px;
+    background: #333;
+    color: #fff;
+    line-height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    box-shadow: 0 3px 5px 0px rgba(0,0,0, .2);
+    transition: .2;
+}
+
+.pie-pagina .red-social ul:hover a{
+    filter: blur(2px);
+}
+
+.pie-pagina .red-social ul li a:hover{
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 5px 5px 0px rgba(0,0,0, .4);
+    filter: none;
+}
+
+.pie-pagina .red-social ul li .facebook:hover{
+    background: #3b5999;
+}
+.pie-pagina .red-social ul li .instagram:hover{
+    background: #e4405f;
+}
+.pie-pagina .red-social ul li .twitter:hover{
+    background: #55acee;
+}
+
+.pie-pagina .grupo-2{
+    background-color: rgb(70, 61, 61);
+    padding: 1rem 1rem;
+    text-align: center;
+    color: white;
+}
+
+.pie-pagina .grupo-2 small{
+    font-size: 1rem;
+}
+
+@media screen and (min-width:320px){
+    .pie-pagina .grupo-1{
+    width: 90%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+    } 
+}
+
+@media screen and (min-width:600px){
+    .pie-pagina .grupo-1{
+    grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:1024px){
+    .pie-pagina .grupo-1{
+    grid-template-columns: repeat(2, 1fr);
+    } 
 }
