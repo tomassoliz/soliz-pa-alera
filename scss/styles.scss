@@ -10,6 +10,7 @@
     background-color: $color-1;
     padding: $tamaño-2;
     border-radius: 10px;
+    text-align: center;
 }
 
 // nesting
@@ -62,11 +63,18 @@ a{
     transition: 0.3s;
 }
 .conteBot{
-    margin: 1rem;
     text-align: center;
+    margin-top: 2rem;
 }
-.imgCard1{
-    width: 20vw;
+.boton{
+    text-decoration: none;
+    background-color: violet;
+    color: black;
+    padding: .6rem;
+    border-radius: 1rem;
+}
+.boton:hover{
+   box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 5px 15px 0 rgba(0,0,0,0.19);
 }
 }
 
@@ -74,33 +82,39 @@ a{
 
 @media screen and (min-width:320px) {
     .conteHome{
+        margin-top : 3rem;
         grid-template-areas: "card1" 
                              "card2"
                              "card3"
                              "card4"
                              "card5" 
                              "card6";
-        margin-bottom: 20rem;
-        row-gap: 2rem;
+    .imgCard1{
+        width: 50vw;
+        }
     }
-    
 }
 
 @media screen and (min-width:600px) {
     .conteHome{
+        margin: 5rem;
         grid-template-areas: "card1 card2" 
                              "card3 card4"
                              "card5 card6";
-    }
-    
+    .imgCard1{
+        width: 30vw;
+        }
+    } 
 }
 
 @media screen and (min-width:1024px) {
     .conteHome{
         grid-template-areas: "card1 card2 card3"
                              "card4 card5 card6";
-    }
-    
+    .imgCard1{
+        width: 15vw;
+        }
+    } 
 }
 
 /* PRODUCTOS */
@@ -236,37 +250,44 @@ a{
 
 @media screen and (min-width:320px) {
     .contenedor{
-        display: grid;
         grid-template-areas: "prod1" 
                              "prod2" 
                              "prod3"                        
                              "prod4" 
                              "prod5" 
                              "prod6";
+        margin-top: 3rem;
         row-gap: $tamaño-1;
-
+        .imgCard{
+            width: 50vw;
+        }
     }
-
 }
 
 @media screen and (min-width:600px) {
     .contenedor{
-        display: grid;
         grid-template-areas: "prod1 prod2" 
                              "prod3 prod4" 
                              "prod5 prod6";
         row-gap: $tamaño-1;
+        margin-top: 5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        .imgCard{
+            width: 30vw;
+        }
     }
-
 }
-
-
 
 @media screen and (min-width:1024px) {
     .contenedor{
-        display: grid;
         grid-template-areas: "prod1 prod2 prod3"
                              "prod4 prod5 prod6";
+        margin-left: 1rem;
+        margin-right: 1rem;
+        .imgCard{
+            width: 17vw;
+        }
     }
 }
 
@@ -274,12 +295,13 @@ a{
 
 .container-form{
     width: 100%;
-    max-width: 1100px;
+    max-width: 1400px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 100px;
-    margin-top: 50px;
+    grid-gap: 10rem;
+    margin-top: 8rem;
+    margin-bottom: 20rem;
 }
 
 .container-form h2{
@@ -301,7 +323,7 @@ a{
     font-weight: 700;
 }
 .container-form a i{
-    color: orange;
+    color: rgb(195, 0, 255);
     margin-right: 10px;
 }
 .container-form form .campo, textarea{
@@ -314,31 +336,31 @@ a{
     outline: 0px;
 }
 .container-form form textarea{
-    max-width: 530px;
-    min-width: 530px;
-    min-height: 140px;
+    max-width: 620px;
+    min-width: 620px;
+    min-height: 150px;
     max-height: 150px;
 }
 .container-form .btn-enviar{
-    padding: 15px;
+    padding: 12px;
     font-size: 16px;
     border: none;
     outline: 0px;
     background: orange;
     color: white;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 300ms ease;
 }
 
 .container-form .btn-borrar{
-    padding: 15px;
+    padding: 12px;
     font-size: 16px;
     border: none;
     outline: 0px;
     background: orange;
     color: white;
-    border-radius: 3px;
+    border-radius: 5px;
     cursor: pointer;
     transition: all 300ms ease;
 }
@@ -351,20 +373,79 @@ a{
     background: #e39403;
 }
 
-/* NOSOTROS */
+/* media de contacto */
 
+@media screen and (min-width:320px){
+    .container-form{
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 8rem;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    .container-form form textarea{
+        max-width: 300px;
+        min-width: 300px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+
+    .container-form form .campo, textarea{
+        width: 85%;
+    }
+}
+
+@media screen and (min-width:600px){
+    .container-form{
+        margin: auto;
+        grid-template-columns: repeat(1,1fr);
+        margin-top: 8rem;
+        margin-bottom: 20rem;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        text-align: center;
+    }
+    .container-form form textarea{
+        max-width: 600px;
+        min-width: 600px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+    .container-form form .campo, textarea{
+        width: 85%;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .container-form{
+        margin: auto;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10rem;
+        margin-top: 8rem;
+        margin-bottom: 20rem;
+    }
+    .container-form form textarea{
+        max-width: 530px;
+        min-width: 530px;
+        min-height: 150px;
+        max-height: 150px;
+    }
+}
+
+
+/* NOSOTROS */
 
 .contenedorNos{
     display: grid;
-    grid-template-areas: "imagen1 imagen2"
+    grid-template-areas: "imagen1 imagen1"
                          "titulo1 titulo2"
                          "titulo3 titulo4";
     margin-bottom: $tamaño-5;
     gap: $tamaño-4;
     text-align: $just-text-1;
 
-    .imgCardnos2{
-        grid-area: imagen2;
+    .imgCardnos1{
+        grid-area: imagen1;
     }
 
     .bloques1{
@@ -403,17 +484,7 @@ a{
     row-gap: 2rem;
     display: flex;
     margin-bottom: 2rem;
-    justify-content: space-around;
-    .imgCardnos1{
-        width: 30vw;
-        margin-top: 70px;
-        border-radius: 20px;
-    } 
-    .imgCardnos2{
-        width: 30vw;
-        margin-top: 70px;        
-        border-radius: 20px;
-    }
+    justify-content: space-around; 
 }
 
 
@@ -422,34 +493,49 @@ a{
 @media screen and (min-width:320px) {
     .contenedorNos{
         grid-template-areas: "imagen1"
-                             "imagen2"
+                             "imagen1"
                              "titulo1" 
                              "titulo2"
                              "titulo3" 
                              "titulo4";
     margin: $tamaño-2;
-    }    
+    }
+    .imgCardnos1{
+        width: 70vw;
+        margin-top: 70px;
+        border-radius: 10px;
+    }  
 }
 
 @media screen and (min-width:600px) {
     .contenedorNos{
-        grid-template-areas: "imagen1"
-                            "imagen2"
+        grid-template-areas:"imagen1"
+                            "imagen1"
                             "titulo1" 
                             "titulo2"
                             "titulo3" 
                             "titulo4";
     margin: $tamaño-4;          
-    }    
+    }
+    .imgCardnos1{
+        width: 70vw;
+        margin-top: 70px;
+        border-radius: 10px;
+    } 
 }
 
 
 @media screen and (min-width:1024px) {
     .contenedorNos{
-        grid-template-areas: "imagen1 imagen"
+        grid-template-areas: "imagen1 imagen2"
                              "titulo1 titulo2"
                              "titulo3 titulo4";
-    }    
+    }
+    .imgCardnos1{
+        width: 60vw;
+        margin-top: 70px;
+        border-radius: 10px;
+        }    
 }
 
 /* PREGUNTAS FRECUENTES */
@@ -562,7 +648,6 @@ a{
 .pie-pagina .grupo-1 .box p{
     color: whitesmoke;
     margin-bottom: 1rem;
-    background-color: tomato;
 }
 
 .pie-pagina .grupo-1 .red-social ul li{
@@ -616,9 +701,58 @@ a{
     font-size: 1rem;
 }
 
+.cont-new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-new{
+    padding: 8px 35px;
+    border-radius: 5px;
+    background-color: #ececec;
+}
+
+.form-new input{
+    font-size: 15px;
+    color: #000;
+    padding: 8px 13px;
+    border: none;
+    outline: none;
+    background: #ececec;  
+}
+
+.form-new button{
+    color: #fff;
+    padding: 8px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    background: #3b5999;
+    cursor: pointer;
+    transition: .3s;
+    margin-left: 3rem;
+}
+
+.form-new button:hover{
+    background: #2e54d3;
+}
+
+.pie-pagina .grupo-1 .box a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+// media de footer
+
 @media screen and (min-width:320px){
     .pie-pagina .grupo-1{
-    width: 90%;
+    width: 100%;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0px;
@@ -627,12 +761,14 @@ a{
 
 @media screen and (min-width:600px){
     .pie-pagina .grupo-1{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
     }
 }
 
 @media screen and (min-width:1024px){
     .pie-pagina .grupo-1{
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
     } 
 }
