@@ -15,7 +15,81 @@
 
 // nesting
 
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
 /* HOME */
+.containerPrincipal{
+    background-color: violet;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+.imagen_logo{
+    width: 13vw;
+}
+
+.contenedor_buscador{
+    margin-top: 2rem;
+    position: relative;
+}
+
+.contenedor_carrito{
+    display: flex;
+    gap: 2rem;
+}
+
+.card_cuenta{
+    margin-top: 2rem;
+}
+
+
+.card_carrito{
+    margin-top: 2rem; 
+    margin-right: 3rem; 
+}
+
+.parrafo_carrito{
+    text-decoration: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.buscador{
+    border: none;
+    border-radius: 1rem;
+    padding: 0.6rem;
+}
+
+.fa-magnifying-glass{
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 12px;
+}
+
+// bootstrap
+
+.container{
+    max-width: 100%;
+    background-color: violet;
+    border-top: 1px solid white;
+}
+ .navbar-nav{
+    gap: 5rem;
+ }
+
+ .nav-link{
+    color:white
+ }
+
+// home general
 
 .conteHome{
     display: grid;
@@ -93,9 +167,18 @@ a{
         width: 50vw;
         }
     }
+    .buscador{
+        width: 250px;
+        outline: none;
+    }
+    .contenedor_logo{
+        display: none;
+        align-items: center;
+    }
 }
 
 @media screen and (min-width:600px) {
+    
     .conteHome{
         margin: 5rem;
         grid-template-areas: "card1 card2" 
@@ -104,7 +187,16 @@ a{
     .imgCard1{
         width: 30vw;
         }
-    } 
+    }
+    .buscador{
+        width: 250px;
+        outline: none;
+    }
+    .contenedor_logo{
+        display: flex;
+        align-items: center;
+    }
+    
 }
 
 @media screen and (min-width:1024px) {
@@ -114,7 +206,15 @@ a{
     .imgCard1{
         width: 15vw;
         }
-    } 
+    }
+    .buscador{
+        width: 850px;
+        outline: none;
+    }
+    .contenedor_logo{
+        display: block;
+        align-items: center;
+    }
 }
 
 /* PRODUCTOS */
@@ -473,9 +573,11 @@ a{
         padding: 0.7rem;
         display: inline-block;
         margin-bottom: $tamaño-1;
+        font-family: 'Roboto', sans-serif;
     }
     .parrafo{
         text-align: justify;
+        font-family: 'Roboto', sans-serif;
     }
 }
 
@@ -546,7 +648,10 @@ a{
     grid-template-areas: "fila1"
                          "fila2"
                          "fila3"
-                         "fila4";
+                         "fila4"
+                         "fila5"
+                         "fila6"
+                         "fila7";
     gap: 2rem;
     margin-left: $tamaño-6;
     margin-right: $tamaño-6;
@@ -554,33 +659,38 @@ a{
     
     .contePr01{
         grid-area: fila1;
-        background-color: beige;
     }
-    
     .contePr02{
         grid-area: fila2;
-        background-color: beige;
     }
-    
     .contePr03{
         grid-area: fila3;
-        background-color: beige;
     }
-    
     .contePr04{
         grid-area: fila4;
-        background-color: beige;
     }
+    .contePr05{
+        grid-area: fila5;
+    }
+    .contePr06{
+        grid-area: fila6;
+    }
+    .contePr07{
+        grid-area: fila7;
+    }
+
     .preguntas{
         text-align: left;
         margin: 10px;
         padding: 5px;
+        font-family: 'Roboto', sans-serif;
     }
     
     .parrafo-p{
         text-align: $just-text-2;
         line-height: 20px;
         margin: 10px;
+        font-family: 'Roboto', sans-serif;
     }
 }
 
@@ -591,7 +701,10 @@ a{
         grid-template-areas: "fila1" 
                              "fila2"
                              "fila3"
-                             "fila4";
+                             "fila4"
+                             "fila5"
+                             "fila6"
+                             "fila7";
     margin: $tamaño-3;
     }
 }
@@ -601,7 +714,10 @@ a{
         grid-template-areas: "fila1" 
                              "fila2"
                              "fila3"
-                             "fila4";
+                             "fila4"
+                             "fila5"
+                             "fila6"
+                             "fila7";
     margin: $tamaño-4;
     }
 }
@@ -610,7 +726,10 @@ a{
         grid-template-areas: "fila1" 
                              "fila2"
                              "fila3"
-                             "fila4";
+                             "fila4"
+                             "fila5"
+                             "fila6"
+                             "fila7";
     margin: $tamaño-6;
     }
 }
@@ -624,35 +743,39 @@ a{
 
 .box{
     text-align: center;
-    padding-top: 2rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    padding-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .pie-pagina .grupo-1{
     width: 100%;
-    max-width: 1200px;
+    max-width: auto;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
-    padding: 45px 0px;
+    padding: 30px 0px;
 }
 
 .pie-pagina .grupo-1 .box h2{
     color: white;
-    margin-bottom: 25px;
-    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    padding-left: 20px;
 }
 
 .pie-pagina .grupo-1 .box p{
     color: whitesmoke;
     margin-bottom: 1rem;
+    
 }
 
 .pie-pagina .grupo-1 .red-social ul li{
     display: inline-block;
     margin: 0 5px;
+    margin-right: 1rem;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -668,10 +791,6 @@ a{
     font-size: 18px;
     box-shadow: 0 3px 5px 0px rgba(0,0,0, .2);
     transition: .2;
-}
-
-.pie-pagina .red-social ul:hover a{
-    filter: blur(2px);
 }
 
 .pie-pagina .red-social ul li a:hover{
@@ -691,14 +810,19 @@ a{
 }
 
 .pie-pagina .grupo-2{
-    background-color: rgb(70, 61, 61);
+    background-color: violet;
+    border-top: 1px solid white;
     padding: 1rem 1rem;
     text-align: center;
-    color: white;
+    color: black;
 }
 
 .pie-pagina .grupo-2 small{
     font-size: 1rem;
+}
+
+.pie-pagina .grupo-2 b{
+    color: #3b5999;    
 }
 
 .cont-new{
@@ -708,30 +832,32 @@ a{
 }
 
 .form-new{
-    padding: 8px 35px;
+    padding: 0.4rem;
     border-radius: 5px;
     background-color: #ececec;
 }
 
 .form-new input{
-    font-size: 15px;
+    font-size: 18px;
     color: #000;
-    padding: 8px 13px;
+    padding: 8px 15px;
+    width: 300px;
     border: none;
     outline: none;
-    background: #ececec;  
+    background: #ececec;
+    
 }
 
 .form-new button{
     color: #fff;
-    padding: 8px;
-    font-size: 20px;
+    padding: 9px;
+    font-size: 18px;
     border: none;
     border-radius: 5px;
     background: #3b5999;
     cursor: pointer;
     transition: .3s;
-    margin-left: 3rem;
+    margin-left: 0.1rem;
 }
 
 .form-new button:hover{
@@ -744,8 +870,8 @@ a{
     text-decoration: none;
     width: 100%;
     margin-bottom: 15px;
-    color: black;
-    font-weight: 700;
+    color: white;
+    font-weight: 400;
 }
 
 // media de footer

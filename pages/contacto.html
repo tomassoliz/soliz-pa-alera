@@ -17,52 +17,76 @@
 
     <!-- link de iconos -->
     <script src="https://kit.fontawesome.com/89495ba4f7.js" crossorigin="anonymous"></script>
+
+    <!-- tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header id="volver">
-
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="../index.html"><img src="../img/logos/Tobislogo.png" alt="logo de la pañalera" class="img-fluid" width="100px" height="100px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="productos.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="productos.html">Huggies</a></li>
-                        <li><a class="dropdown-item" href="productos.html">Pampers</a></li>
-                        <li><a class="dropdown-item" href="productos.html">Babysec</a></li>
-                        <li><a class="dropdown-item" href="productos.html">Estrella</a></li>
-                        <li><a class="dropdown-item" href="productos.html">Nutricion</a></li>
-                        <li><a class="dropdown-item" href="productos.html">Accesorios</a></li>
-                        <li><a class="dropdown-item" href="productos.html">Adultos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#volver">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="preguntasfrecuentes.html">Preguntas Frecuentes</a>
-                    </li>
-                    </ul>
+        <div class="containerPrincipal">
+            <a href="../index.html">
+                <img class="imagen_logo" src="/img/logos/Tobislogo.png" alt="logo de la pañalera"> 
+            </a>
+            <div class="contenedor_buscador">
+                <form action="">
+                    <input type="text" class="buscador" placeholder="¿Qué estas buscando?">
+                    <span> <i class="fa-solid fa-magnifying-glass"></i></span>
+                </form>
+            </div>
+            <div class="contenedor_carrito">
+                <div class="card_cuenta">
+                    <i class="fa-solid fa-user"></i>
+                    <a href="" class="parrafo_carrito"><p>Mi Cuenta</p></a>
                 </div>
+                <div class="card_carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="" class="parrafo_carrito"><p>Mi Carrito</p></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center p-1">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto text-left" >
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="../index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="../pages/productos.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Productos
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Huggies</a></li>
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Pampers</a></li>
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Babysec</a></li>
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Estrella</a></li>
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Nutricion</a></li>
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Accesorios</a></li>
+                                    <li><a class="dropdown-item" href="../pages/productos.html">Adultos</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#volver">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
-
     </header>
 
     <main>

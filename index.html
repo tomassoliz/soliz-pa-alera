@@ -19,61 +19,89 @@
     <!-- link de iconos -->
     <script src="https://kit.fontawesome.com/89495ba4f7.js" crossorigin="anonymous"></script>
 
+    <!-- tipografia -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
     <link rel="shortcut icon" href="img/logos/logobebe.png" type="image/x-icon">
     <title>Pañalera Tobis - Home</title>
 </head>
 
 <body>
     <header id="volver">
-
-        <div class="container">
-
-            <nav class="navbar navbar-expand-lg bg-light">
-                <div class="container-fluid">
-                <a class="navbar-brand" href="#volver"><img src="img/logos/Tobislogo.png" alt="logo de la pañalera" class="img-fluid" width="100px" height="100px"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav ms-auto text-left" >
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#volver">Inicio</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="pages/productos.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Productos
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item" href="pages/productos.html">Huggies</a></li>
-                        <li><a class="dropdown-item" href="pages/productos.html">Pampers</a></li>
-                        <li><a class="dropdown-item" href="pages/productos.html">Babysec</a></li>
-                        <li><a class="dropdown-item" href="pages/productos.html">Estrella</a></li>
-                        <li><a class="dropdown-item" href="pages/productos.html">Nutricion</a></li>
-                        <li><a class="dropdown-item" href="pages/productos.html">Accesorios</a></li>
-                        <li><a class="dropdown-item" href="pages/productos.html">Adultos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/contacto.html">Contacto</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
-                    </li>
-                    </ul>
+        <div class="containerPrincipal">
+            <div class="contenedor_logo">
+            <a href="index.html">
+                <img class="imagen_logo" src="/img/logos/Tobislogo.png" alt="logo de la pañalera"> 
+            </a>
+            </div>
+            <div class="contenedor_buscador">
+                <form action="">
+                    <input type="text" class="buscador" placeholder="¿Qué estas buscando?">
+                    <span> <i class="fa-solid fa-magnifying-glass"></i></span>
+                </form>
+            </div>
+            <div class="contenedor_carrito">
+                <div class="card_cuenta">
+                    <i class="fa fa-user"></i>
+                    <a href=""class="parrafo_carrito"><p>Mi Cuenta</p></a>
                 </div>
+                <div class="card_carrito">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <a href="" class="parrafo_carrito"><p>Mi Carrito</p></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-around">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav ms-auto text-left" >
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#volver">Inicio</a>
+                                </li>
+                                <li class="nav-item dropdown text-black">
+                                    <a class="nav-link dropdown-toggle" href="pages/productos.html" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Productos
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink text-dark">
+                                        <li><a class="dropdown-item" href="pages/productos.html">Huggies</a></li>
+                                        <li><a class="dropdown-item" href="pages/productos.html">Pampers</a></li>
+                                        <li><a class="dropdown-item" href="pages/productos.html">Babysec</a></li>
+                                        <li><a class="dropdown-item" href="pages/productos.html">Estrella</a></li>
+                                        <li><a class="dropdown-item" href="pages/productos.html">Nutricion</a></li>
+                                        <li><a class="dropdown-item" href="pages/productos.html">Accesorios</a></li>
+                                        <li><a class="dropdown-item" href="pages/productos.html">Adultos</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/nosotros.html">Nosotros</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="pages/preguntasfrecuentes.html">Preguntas Frecuentes</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
-
     </header>
 
-
-
     <main>
-
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true" class="carrusel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -82,7 +110,7 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="img/banner/banner.babysec.png" class="d-block w-100" alt="banners de pañales babysec">
+                <img src="img/banner/banner.babysec.png" class="d-block w-100" alt="banner de pañales babysec">
               </div>
               <div class="carousel-item">
                 <img src="img/banner/banner.huggies.png" class="d-block w-100" alt="banner de pañales huggies">
@@ -99,10 +127,9 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
         
         <div class="conteHome">
-
             <div class="conteCard1">
                 <div class="homeInicio">
                     <img class="imgCard1" src="img/home-img/bebes.jpg" alt="imagen de bebes">
@@ -111,7 +138,6 @@
                     <a class="boton" href="">BEBES</a>
                 </div>
             </div>
-
             <div class="conteCard2">
                 <div class="home-inicio">
                     <img class="imgCard1" src="img/home-img/accesorios.jpg" alt="imagen de accesorios">
@@ -120,7 +146,6 @@
                     <a class="boton" href="">ACCESORIOS</a>
                 </div>
             </div>
-            
             <div class="conteCard3">
                 <div class="homeInicio">
                     <img class="imgCard1" src="img/home-img/nutricion.jpg" alt="imagen de nutricion">
@@ -129,7 +154,6 @@
                     <a class="boton" href="">NUTRICION</a>
                 </div>
             </div>
-
             <div class="conteCard4">
                 <div class="home-inicio">
                     <img class="imgCard1" src="img/home-img/juguetes.jpg" alt="imagen de juguetes">
@@ -138,7 +162,6 @@
                     <a class="boton" href="">JUGUETES</a>
                 </div>
             </div>
-
             <div class="conteCard5">
                 <div class="homeInicio">
                     <img class="imgCard1" src="img/home-img/adultos.jpg" alt="imagen de adultos">
@@ -147,7 +170,6 @@
                     <a class="boton" href="">ADULTOS</a>
                 </div>
             </div>
-
             <div class="conteCard6">
                 <div class="home-inicio">
                     <img class="imgCard1" src="img/home-img/oferta.jpg" alt="imagen de ofertas">
@@ -156,7 +178,6 @@
                     <a class="boton" href="">OFERTAS</a>
                 </div>
             </div>
-
         </div>
 
     </main>
