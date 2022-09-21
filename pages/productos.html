@@ -8,7 +8,7 @@
     <meta name="keywords"  content="PAÑALERA, PAÑAL, BEBES, NUTRICION, ADULTOS, ACCESORIOS, PRODUCTOS, DESTACADOS, PRECIO, MERCADO, BABYSEC, HUGGIES, PAMPERS, ESTRELLA, DUFFY, AVENT, LOVE ">
 
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous"> 
 
     <!-- link css -->
     <link rel="stylesheet" href="../css/main.css">
@@ -27,6 +27,7 @@
 </head>
 
 <body>
+
     <header id="volver">
         <div class="containerPrincipal">
             <a href="../index.html">
@@ -88,12 +89,80 @@
                     </div>
                 </div>
             </nav>
-        </div>
+        </div>  
     </header>
-     
-    <main>
+
+    <main class="main-producto">
     
-        <div class="contenedor">
+        <div class="container-producto">
+          <h1>Carrito</h1>
+            <hr>
+    
+            <table class="table">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Acción</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="items"></tbody>
+              <tfoot>
+                <tr id="footer">
+                  <th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>
+                </tr>
+              </tfoot>
+            </table>
+            <div class="row" id="cards"></div>
+    
+            <template id="template-footer">
+              <th scope="row" colspan="2">Total productos</th>
+              <td>10</td>
+              <td>
+                  <button class="btn btn-danger btn-sm" id="vaciar-carrito">
+                      vaciar todo
+                  </button>
+              </td>
+              <td class="font-weight-bold">$ <span>5000</span></td>
+            </template>
+    
+            <template id="template-carrito">
+              <tr>
+                <th scope="row">id</th>
+                <td>Café</td>
+                <td>1</td>
+                <td>
+                    <button class="btn btn-info btn-sm">
+                        +
+                    </button>
+                    <button class="btn btn-danger btn-sm">
+                        -
+                    </button>
+                </td>
+                <td>$ <span>500</span></td>
+              </tr>
+            </template>
+    
+            <template id="template-card">
+              <div class="col-12 mb-2 col-md-4">
+                <div class="card">
+                  <img src="" alt="" class="text-center">
+                  <div class="card-body text-center">
+                    <h5 class="titulo-card">Titulo</h5>
+                    <p>precio</p>
+                    <button class="btn btn-dark">Comprar</button>
+                  </div>
+                </div>
+              </div>
+            </template>
+        </div>
+
+    </main>
+
+    
+    <!-- <div class="contenedor">
 
             <div class="cardCard01">
                 <div class="contenedorCard">
@@ -172,9 +241,7 @@
                     <button class="botonComprar"></button>
                 </div>       
             </div>
-        </div>
-
-    </main>
+        </div> -->
     
     <footer class="pie-pagina">
         <div class="grupo-1">
@@ -201,8 +268,10 @@
         </div>
     </footer>
 
-    <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="../funciones.js"></script>
 
+    <!-- JavaScript Bundle with Popper 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
 </body>
+
 </html>

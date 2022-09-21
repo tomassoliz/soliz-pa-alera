@@ -1,0 +1,56 @@
+[
+    {
+      "precio": 1900,
+      "id": 1,
+      "title": "Huggies",
+      "url": "../img/imagen-carrito/huggies.jpg"
+    },
+    {
+      "precio": 2500,
+      "id": 2,
+      "title": "Pampers",
+      "url": "../img/imagen-carrito/pampers.jpg"
+    },
+    {
+      "precio": 1100,
+      "id": 3,
+      "title": "Babysec",
+      "url": "../img/imagen-carrito/babysec.jpg"
+    },
+    {
+      "precio": 1450,
+      "id": 4,
+      "title": "Estrella",
+      "url": "../img/imagen-carrito/estrella.jpg"
+    },
+    {
+      "precio": 1000,
+      "id": 5,
+      "title": "Duffy",
+      "url": "../img/imagen-carrito/duffy.jpg"
+    },
+    {
+      "precio": 2600,
+      "id": 6,
+      "title": "Avent",
+      "url": "../img/imagen-carrito/avent.jpg"
+    },
+    {
+      "precio": 350,
+      "id": 7,
+      "title": "Protector Mamario",
+      "url": "../img/imagen-carrito/protector.jpg"
+    },
+    {
+      "precio": 55000,
+      "id": 8,
+      "title": "Cochesito Mega Baby",
+      "url": "../img/imagen-carrito/cochesito.jpg"
+    },
+    {
+      "precio": 5500,
+      "id": 9,
+      "title": "Nutrilon 3",
+      "url": "../img/imagen-carrito/nutrilon.png"
+    }
+  ]
